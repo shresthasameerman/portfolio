@@ -1,0 +1,56 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  background-color: var(--bg-color); /* Use the background color variable */
+
+  span {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    color: var(--text-color); /* Set text color */
+  }
+
+  img {
+    width: 20px;
+  }
+}
+
+.skillList {
+  display: flex;
+  justify-content: space-evenly;
+  align-self: center;
+  flex-wrap: wrap;
+  row-gap: 40px;
+  max-width: 26ch;
+}
+
+hr {
+  width: 100px;
+  height: 1px;
+  border: none;
+  background-color: var(--text-color); /* Use variable for line color */
+  margin: 30px auto;
+}
+
+@media (min-width: 800px) { /* Changed from width >= 800px to min-width */
+  .skillList {
+    max-width: fit-content;
+    gap: 30px;
+
+    p {
+      font-size: 20px;
+      color: var(--text-color); /* Ensure text color remains consistent */
+    }
+  }
+
+  hr {
+    width: 300px;
+  }
+}
+
+/* Example of color change on hover */
+.container:hover {
+  background-color: var(--highlight-color); /* Change background color on hover */
+  transition: background-color 0.3s ease; /* Smooth transition */
+}
